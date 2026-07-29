@@ -1,0 +1,37 @@
+# System Architecture
+
+## Overview
+
+The Urban Intelligence Platform receives data from multiple external systems and vendors, normalizes incoming information, stores standardized records, detects anomalies, and provides operational insights.
+
+---
+
+## High-Level Data Flow
+
+External Systems
+        │
+        ▼
+Raw Payload Ingestion
+        │
+        ▼
+Validation Layer
+        │
+        ▼
+Vendor Adapter
+        │
+        ▼
+Normalization Layer
+        │
+        ▼
+Canonical Data Model
+        │
+        ▼
+SQLite Database
+        │
+ ┌──────┼─────────┐
+ ▼      ▼         ▼
+SQL   Anomaly   Dashboard
+Analytics Detection
+        │
+        ▼
+AI Knowledge Platform
